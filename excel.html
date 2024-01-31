@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/excel.css">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <title>Excelsub.com</title>
+</head>
+<body>
+    <div class="container">
+     <div class="header">
+        <img src="exsub-logo.png" alt="">
+        <div class="inner-header" >
+          
+        <p><a href="#">Sign Up</a></p>
+    </div>
+     </div>
+     <div class="first" id="popup">
+        <h1>Welcome back</h1>
+        <p>Enter your email and password to sign in</p>
+        <form action="excelsub.html">
+            <div class="password">
+            <label for="email" class="form_label">Email</label><br>
+            <input type="email" required name="email" class="form_input" id="email" placeholder="Email"><br>
+        </div> 
+        <div class="password">
+            <label for="password" class="form_label">password</label><br>
+            <input type="password" required class="form_input" name="password" placeholder="password" id="password"><br>
+        </div>
+            <input type="checkbox" name="toggle" id="toggle">
+            <label for="checkbox">show password</label><br><br>
+            <button type="submit" onclick="openpopup()">SIGN IN</button>
+               
+        </form>
+        <h5>Don't have an account? <a href="#">Sign Up</a> </h5>
+        <h4>Forgot your password? <a href="#">Recover password</a> </h4>
+     </div>
+     <p class="last">Copyright &copy; 2023Excelsub</p>
+     </div>
+    </div>
+</body>
+<script>
+    const toggle=document.getElementById("toggle");
+    const password=document.getElementById("password");
+    toggle.addEventListener("click",function()
+    {
+        if(password.type == "text")
+        password.type="password";
+    else{
+        password.type="text"
+    }
+    });
+    // let popup=document.getElementById("popup");
+    // function openpopup(){
+    //     popup.classList.add('openpopup')
+    // }
+    // function closepopup(){
+    //     popup.classList.remove('openpopup')
+    // }
+</script>
+</html>
+<!-- <div class="popup" id="popup">
+    <h1>Welcome to Excelsub</h1> 
+ <P>Money Transfered into this account will be credited automatically</P>
+ <p>Thank you!</p>
+ <button type="button" class="ok" onclick="closepopup()">ok</button>
+ </div>
+<button type="submit" onclick="openpopup()">SIGN IN</button>
+</div> -->
